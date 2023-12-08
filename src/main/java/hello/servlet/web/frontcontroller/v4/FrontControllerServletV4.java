@@ -40,6 +40,7 @@ public class FrontControllerServletV4 extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
 
         String viewName = controller.process(paramMap, model);
+        System.out.println(model.toString());
 
         MyView view = viewResolver(viewName);
         view.render(model, request, response);
